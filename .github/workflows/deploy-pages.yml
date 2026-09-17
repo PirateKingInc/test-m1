@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/nokia-snake-game-4ig82j
+      - main
   workflow_dispatch:
 
 permissions:
