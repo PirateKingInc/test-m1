@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#3a4a2f">
+<title>SNAKE II</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="phone-brand">NOKIA</div>
+
+  <div class="screen-bezel">
+    <div class="screen">
+      <div class="screen-top">
+        <span id="scoreLabel">SCORE 0</span>
+        <span id="highScoreLabel">HI 0</span>
+      </div>
+
+      <div class="screen-body">
+        <canvas id="game" width="84" height="84" aria-label="Snake game board" role="img"></canvas>
+
+        <div id="startOverlay" class="overlay">
+          <div class="overlay-title">SNAKE II</div>
+          <div class="overlay-text">PRESS ANY KEY</div>
+          <div class="overlay-hint">ARROWS / WASD<br>OR SWIPE</div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+          <div class="overlay-title">GAME OVER</div>
+          <div class="overlay-text" id="finalScoreText">SCORE 0</div>
+          <div class="overlay-text" id="newHighText"></div>
+          <div class="overlay-hint">PRESS ANY KEY<br>TO RETRY</div>
+        </div>
+      </div>
+
+      <div class="screen-bottom">
+        <span class="dot-matrix">&bull; &bull; &bull;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="keypad" id="keypad">
+    <div class="key-row">
+      <button class="key key-up" data-dir="UP" aria-label="Up">&#9650;</button>
+    </div>
+    <div class="key-row">
+      <button class="key key-left" data-dir="LEFT" aria-label="Left">&#9664;</button>
+      <button class="key key-center" data-dir="" aria-label="Pause">&#9724;</button>
+      <button class="key key-right" data-dir="RIGHT" aria-label="Right">&#9654;</button>
+    </div>
+    <div class="key-row">
+      <button class="key key-down" data-dir="DOWN" aria-label="Down">&#9660;</button>
+    </div>
+  </div>
+
+  <div class="phone-footer">SWIPE THE SCREEN TO STEER &middot; NO ZOOM</div>
+</div>
+
+<script src="js/game-logic.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
